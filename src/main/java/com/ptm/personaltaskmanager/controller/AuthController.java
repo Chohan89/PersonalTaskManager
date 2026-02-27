@@ -15,7 +15,6 @@ import com.ptm.personaltaskmanager.service.CreateAccountService;
 @RestController
 @RequestMapping("/api/v1/auth")
 public class AuthController {
-
     private final AuthService authService;
     private final CreateAccountService createAccountService;
 

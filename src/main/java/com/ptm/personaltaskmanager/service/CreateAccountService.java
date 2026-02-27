@@ -1,5 +1,7 @@
 package com.ptm.personaltaskmanager.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,8 @@ import com.ptm.personaltaskmanager.model.Users;
 @Service
 public class CreateAccountService {
 
+	private static final Logger log = LoggerFactory.getLogger(CreateAccountService.class);
+
 	private final CreateAccountRepository createAccountRepository;
     private final PasswordEncoder passwordEncoder;
 	
@@ -21,6 +25,8 @@ public class CreateAccountService {
 	}
 	
 	public CreateAccountResponse createUser(CreateAccountRequest request) {
+		log.debug("CreateAccountService.createUser: Starting Method");
+		log.debug("CreateAccountService.createUser: request username = " + request.getUsername());
 		
 		//if username exists in db we throw exception
 		createAccountRepository.findByUsername(request.getUsername())
@@ -35,6 +41,8 @@ public class CreateAccountService {
 		CreateAccountResponse response = new CreateAccountResponse();
 		response.setUsername(user.getUsername());
 		response.setMessage("Login successful");
+	    log.debug("CreateAccountService.createUser: response message = " + response.getMessage());
+		
         return response;
 	}
 }
