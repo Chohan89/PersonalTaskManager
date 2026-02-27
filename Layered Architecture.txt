@@ -1,0 +1,395 @@
+Love this question — getting the **layered Spring architecture right early** saves *so much* pain later. Let’s lay out the **canonical, production-grade Spring Boot layering**, what **each layer does**, and **what belongs (and does NOT belong) in each**.
+
+I’ll assume a **REST API / backend service** (which fits your weather middleware + task manager direction).
+
+---
+
+# Canonical Layered Spring Boot Architecture
+
+```
+┌──────────────────────────────┐
+│        Controller Layer       │  (Web / API)
+└──────────────┬───────────────┘
+               │
+┌──────────────▼───────────────┐
+│        Service Layer           │  (Business Logic)
+└──────────────┬───────────────┘
+               │
+┌──────────────▼───────────────┐
+│        Repository Layer        │  (Data Access)
+└──────────────┬───────────────┘
+               │
+┌──────────────▼───────────────┐
+│        Database / External     │
+│        APIs / Message Brokers │
+└──────────────────────────────┘
+```
+
+Plus **cross-cutting layers**:
+
+* DTOs
+* Configuration
+* Exception handling
+* Security (optional)
+* Utilities
+
+---
+
+## 1️⃣ Controller Layer (Web / API)
+
+### Purpose
+
+* **Handles HTTP requests & responses**
+* Translates **HTTP → Java** and **Java → HTTP**
+* NOTHING ELSE
+
+### What it hosts
+
+* `@RestController`
+* `@RequestMapping`, `@GetMapping`, `@PostMapping`
+* Request validation (`@Valid`)
+* HTTP status codes
+
+### What it should NOT do ❌
+
+* Business logic
+* Database calls
+* Complex transformations
+
+### Example
+
+```java
+@RestController
+@RequestMapping("/api/tasks")
+public class TaskController {
+
+    private final TaskService taskService;
+
+    public TaskController(TaskService taskService) {
+        this.taskService = taskService;
+    }
+
+    @GetMapping("/{id}")
+    public TaskResponse getTask(@PathVariable Long id) {
+        return taskService.getTask(id);
+    }
+}
+```
+
+### Package
+
+```
+controller
+```
+
+---
+
+## 2️⃣ Service Layer (Business Logic)
+
+### Purpose
+
+* **Core business rules**
+* Orchestrates workflows
+* Transaction boundaries
+
+### What it hosts
+
+* `@Service`
+* Business logic
+* Calls to repositories
+* Calls to other services
+* `@Transactional`
+
+### What it should NOT do ❌
+
+* HTTP concerns
+* JPA annotations
+* Direct request/response objects
+
+### Example
+
+```java
+@Service
+public class TaskService {
+
+    private final TaskRepository taskRepository;
+
+    public TaskService(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
+
+    public TaskResponse getTask(Long id) {
+        Task task = taskRepository.findById(id)
+            .orElseThrow(() -> new TaskNotFoundException(id));
+
+        return TaskMapper.toResponse(task);
+    }
+}
+```
+
+### Package
+
+```
+service
+```
+
+---
+
+## 3️⃣ Repository Layer (Data Access)
+
+### Purpose
+
+* **Talks to the database**
+* Nothing else
+
+### What it hosts
+
+* `@Repository`
+* Spring Data JPA interfaces
+* SQL / JPQL / queries
+
+### What it should NOT do ❌
+
+* Business logic
+* DTO mapping
+* HTTP logic
+
+### Example
+
+```java
+@Repository
+public interface TaskRepository extends JpaRepository<Task, Long> {
+}
+```
+
+### Package
+
+```
+repository
+```
+
+---
+
+## 4️⃣ Domain / Entity Layer (Core Model)
+
+### Purpose
+
+* **Represents your core business data**
+* Maps to DB tables
+
+### What it hosts
+
+* JPA entities
+* Domain enums
+* Value objects
+
+### What it should NOT do ❌
+
+* Controllers
+* API response shapes
+* External formats
+
+### Example
+
+```java
+@Entity
+@Table(name = "tasks")
+public class Task {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String title;
+    private boolean completed;
+}
+```
+
+### Package
+
+```
+domain
+```
+
+---
+
+## 5️⃣ DTO Layer (API Contracts)
+
+### Purpose
+
+* **Defines what your API exposes**
+* Protects your domain model
+
+### What it hosts
+
+* Request DTOs
+* Response DTOs
+
+### Why it matters
+
+* You can change DB schema without breaking API clients
+* Prevents accidental over-exposure
+
+### Example
+
+```java
+public record TaskResponse(
+    Long id,
+    String title,
+    boolean completed
+) {}
+```
+
+### Package
+
+```
+dto
+```
+
+---
+
+## 6️⃣ Mapper Layer (Optional but recommended)
+
+### Purpose
+
+* Converts **Entity ↔ DTO**
+
+### What it hosts
+
+* Mapping logic
+* MapStruct or manual mappers
+
+### Example
+
+```java
+public class TaskMapper {
+
+    public static TaskResponse toResponse(Task task) {
+        return new TaskResponse(
+            task.getId(),
+            task.getTitle(),
+            task.isCompleted()
+        );
+    }
+}
+```
+
+### Package
+
+```
+mapper
+```
+
+---
+
+## 7️⃣ Configuration Layer
+
+### Purpose
+
+* App wiring & infrastructure
+
+### What it hosts
+
+* `@Configuration`
+* Beans
+* CORS
+* Security config
+* RestTemplate / WebClient beans
+
+### Package
+
+```
+config
+```
+
+---
+
+## 8️⃣ Exception Handling Layer
+
+### Purpose
+
+* Centralized error handling
+* Clean API responses
+
+### What it hosts
+
+* Custom exceptions
+* `@ControllerAdvice`
+
+### Example
+
+```java
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(TaskNotFoundException.class)
+    public ResponseEntity<String> handleNotFound(Exception ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+}
+```
+
+### Package
+
+```
+exception
+```
+
+---
+
+## Recommended Package Structure
+
+```
+com.example.personaltaskmanager
+│
+├── controller
+├── service
+├── repository
+├── domain
+├── dto
+├── mapper
+├── config
+├── exception
+└── PersonalTaskManagerApplication.java
+```
+
+> 🔥 Pro tip: **Avoid `util` dumping grounds** — keep responsibilities explicit.
+
+---
+
+## Dependency Rules (VERY IMPORTANT)
+
+✅ Allowed:
+
+* Controller → Service
+* Service → Repository
+* Service → Service
+* Repository → Domain
+
+❌ Not allowed:
+
+* Controller → Repository
+* Controller → Domain
+* Repository → Service
+* Entity → DTO
+
+---
+
+## Why this setup is “correct”
+
+* Testable
+* Scales cleanly
+* Works with Spring Security
+* Easy to split into microservices later
+* Familiar to any senior Spring dev
+
+---
+
+If you want next, I can:
+
+* Apply this structure to **your exact project**
+* Generate **empty classes for each layer**
+* Show how this maps to **hexagonal / clean architecture**
+* Review your current package tree and correct it
+
+Just tell me what you want to do next 👌

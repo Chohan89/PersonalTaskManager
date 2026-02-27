@@ -1,0 +1,20 @@
+
+CREATE TABLE "Credentials" (
+  "id" integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY (sequence name "Credentials_id_seq"),
+  "username" varchar(20) NOT NULL UNIQUE,
+  "password" varchar(12)
+);
+
+CREATE TYPE task_status AS ENUM (
+  'not_in_progress',
+  'in_progress',
+  'done'
+);
+
+CREATE TABLE "Tasks" (
+  "tasknumber" integer PRIMARY KEY,
+  "username" varchar(20) NOT NULL,
+  "task" text NOT NULL,
+  "status" task_status,
+  "category" varchar(20)
+);
