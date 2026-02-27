@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/task")
 public class PersonalTaskManagerController {
 
 	private static final Logger log = LoggerFactory.getLogger(PersonalTaskManagerController.class);
