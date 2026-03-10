@@ -1,16 +1,18 @@
 package com.ptm.personaltaskmanager.dto;
 
+import com.ptm.personaltaskmanager.enums.ResponseCodes;
+
 public class LoginResponse {
 
 	private String username;
-	private String message;
-
-	public String getMessage() {
-		return message;
+	private ResponseCodes responseCodes;
+	
+	public ResponseCodes getResponseCodes() {
+		return responseCodes;
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+	public void setResponseCodes(ResponseCodes responseCodes) {
+		this.responseCodes = responseCodes;
 	}
 
 	public String getUsername() {
@@ -20,5 +22,4 @@ public class LoginResponse {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
 }

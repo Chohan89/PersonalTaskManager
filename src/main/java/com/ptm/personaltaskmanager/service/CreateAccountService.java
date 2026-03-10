@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 import com.ptm.personaltaskmanager.database.CreateAccountRepository;
 import com.ptm.personaltaskmanager.dto.CreateAccountRequest;
 import com.ptm.personaltaskmanager.dto.CreateAccountResponse;
+import com.ptm.personaltaskmanager.enums.ResponseCodes;
 import com.ptm.personaltaskmanager.exception.DuplicateTitleException;
+import com.ptm.personaltaskmanager.mapper.UserMapper;
+import com.ptm.personaltaskmanager.model.Tasks;
 import com.ptm.personaltaskmanager.model.Users;
 
 @Service
@@ -18,15 +21,25 @@ public class CreateAccountService {
 
 	private final CreateAccountRepository createAccountRepository;
     private final PasswordEncoder passwordEncoder;
+    private final UserMapper userMapper;
 	
-	public CreateAccountService(CreateAccountRepository createAccountRepository, PasswordEncoder passwordEncoder) {
+	public CreateAccountService(CreateAccountRepository createAccountRepository, 
+			PasswordEncoder passwordEncoder, UserMapper userMapper) {
 		this.createAccountRepository =  createAccountRepository;
         this.passwordEncoder = passwordEncoder;
+        this.userMapper = userMapper;
 	}
 	
 	public CreateAccountResponse createUser(CreateAccountRequest request) {
 		log.debug("CreateAccountService.createUser: Starting Method");
 		log.debug("CreateAccountService.createUser: request username = " + request.getUsername());
+		
+		if(request.getUsername() == null || request.getUsername().isBlank()) {
+			throw new IllegalArgumentException("Username cannot be empty");
+		}
+		if(request.getPassword() == null || request.getPassword().isBlank()) {
+			throw new IllegalArgumentException("Password cannot be empty");
+		}
 		
 		//if username exists in db we throw exception
 		createAccountRepository.findByUsername(request.getUsername())
@@ -34,14 +47,15 @@ public class CreateAccountService {
 		            throw new DuplicateTitleException();
 		        });
 
-		Users user = new Users(); 
-		user.setUsername(request.getUsername());
-	    user.setPasswordHash(passwordEncoder.encode(request.getPassword()));
+        // DTO → Entity
+        Users user = userMapper.toEntity(request);
+	    
+	    //create user, error handling done by GlobalExceptionHandler class
+	    createAccountRepository.save(user);
 
-		CreateAccountResponse response = new CreateAccountResponse();
-		response.setUsername(user.getUsername());
-		response.setMessage("Login successful");
-	    log.debug("CreateAccountService.createUser: response message = " + response.getMessage());
+		CreateAccountResponse response = userMapper.toResponse(user);
+		response.setResponseCodes(ResponseCodes.SUCCESS);
+	    log.debug("CreateAccountService.createUser: response message = " + response.getResponseCodes().message());
 		
         return response;
 	}

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.ptm.personaltaskmanager.database.AuthenticationRepository;
 import com.ptm.personaltaskmanager.dto.LoginRequest;
 import com.ptm.personaltaskmanager.dto.LoginResponse;
+import com.ptm.personaltaskmanager.enums.ResponseCodes;
 import com.ptm.personaltaskmanager.exception.InvalidPasswordException;
 import com.ptm.personaltaskmanager.exception.UserNotFoundException;
 import com.ptm.personaltaskmanager.model.Users;
@@ -28,6 +29,13 @@ public class AuthService {
     	log.debug("AuthService.login: Starting Method");
     	log.debug("AuthService.login: Username = " + request.getUsername());
     	
+    	if(request.getUsername() == null || request.getUsername().isBlank()) {
+    		throw new IllegalArgumentException("Username cannot be empty");
+    	}
+    	if(request.getPassword() == null || request.getPassword().isBlank()) {
+    		throw new IllegalArgumentException("Password cannot be empty");
+    	}
+    	
         Users user = authenticationRepository.findByUsername(request.getUsername())
                 .orElseThrow(() -> new UserNotFoundException(request.getUsername()));
 
@@ -36,10 +44,9 @@ public class AuthService {
         }
 
         LoginResponse response = new LoginResponse();
-        response.setMessage("Login successful");
+        response.setResponseCodes(ResponseCodes.SUCCESS);
         //response.setToken("dummy-token"); // replace with JWT later
-    	log.debug("AuthService.login: Message = " + response.getMessage());
-
+    	log.debug("AuthService.login: Message = " + response.getResponseCodes());
         return response;
     }
 
