@@ -2,6 +2,7 @@ package com.ptm.personaltaskmanager.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import com.ptm.personaltaskmanager.database.UpdateTaskRepository;
 import com.ptm.personaltaskmanager.dto.UpdateTaskRequest;
@@ -11,6 +12,7 @@ import com.ptm.personaltaskmanager.exception.TaskNotFoundException;
 import com.ptm.personaltaskmanager.mapper.TaskMapper;
 import com.ptm.personaltaskmanager.model.Tasks;
 
+@Service
 public class UpdateTaskService {
 
 	private static final Logger log = LoggerFactory.getLogger(CreateAccountService.class);
@@ -31,7 +33,7 @@ public class UpdateTaskService {
 		log.debug("UpdateTaskService.updateTask: ID= " + request.getTaskNumber());
 
 		//if task does not exist, throw error
-		Tasks task = updateTaskRepository.findbyTaskNumber(request.getTaskNumber())
+		Tasks task = updateTaskRepository.findByTaskNumber(request.getTaskNumber())
 				.orElseThrow(() -> new TaskNotFoundException(request.getTask()));
 		
 		//make sure the username from request matches result's username from findbyID

@@ -1,0 +1,489 @@
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+
+java.io.EOFException
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1339) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:776) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:334) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-1] o.apache.coyote.http11.Http11Processor   : Error state [CLOSE_CONNECTION_NOW] reported while processing request
+
+java.io.EOFException
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1339) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:776) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:334) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-03-10T18:30:33.725-04:00  INFO 33432 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T18:30:33.725-04:00  INFO 33432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@44476fbf
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4b67c8f1
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-03-10T18:30:33.725-04:00  INFO 33432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/createaccount", parameters={}
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.ptm.personaltaskmanager.controller.AuthController#createAccount(CreateAccountRequest)
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] org.hibernate.orm.core                   : HHH006588: Opening session [tenant=null]
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.ptm.personaltaskmanager.dto.CreateAccountRequest@5a38f6b0]
+2026-03-10T18:30:33.725-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] c.p.p.service.CreateAccountService       : CreateAccountService.createUser: Starting Method
+2026-03-10T18:30:33.731-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] c.p.p.service.CreateAccountService       : CreateAccountService.createUser: request username = testuser
+2026-03-10T18:30:33.731-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.d.j.r.query.PartTreeJpaQuery         : QueryPreparer: Derived query for query method [public abstract java.util.Optional com.ptm.personaltaskmanager.database.CreateAccountRepository.findByUsername(java.lang.String)]: 'SELECT u FROM Users u WHERE u.username = :username'
+2026-03-10T18:30:33.733-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T18:30:33.842-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(2036203424<open>)] for JPA transaction
+2026-03-10T18:30:33.842-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2026-03-10T18:30:33.842-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] org.hibernate.orm.core                   : HHH006583: Beginning transaction
+2026-03-10T18:30:33.842-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] org.postgresql.jdbc.PgConnection         :   setAutoCommit = false
+2026-03-10T18:30:33.842-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@68d32fd5]
+2026-03-10T18:30:33.859-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into users (password,username) values (?,?)
+2026-03-10T18:30:33.892-04:00  WARN 33432 --- [http-nio-8080-exec-2] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 22001
+2026-03-10T18:30:33.892-04:00  WARN 33432 --- [http-nio-8080-exec-2] org.hibernate.orm.jdbc.error             : ERROR: value too long for type character varying(12)
+2026-03-10T18:30:33.892-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] org.hibernate.orm.jdbc.error             : could not execute statement [insert into users (password,username) values (?,?)]
+
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(12)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2875) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2560) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:429) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:526) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:436) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196) ~[postgresql-42.7.10.jar:42.7.10]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157) ~[postgresql-42.7.10.jar:42.7.10]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:181) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:103) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:45) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:66) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:180) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:120) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:84) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:270) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:371) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:285) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:215) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:133) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:145) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:89) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:73) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:49) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:689) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:672) ~[hibernate-core-7.2.4.Final.jar:7.2.4.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362) ~[spring-orm-7.0.5.jar:7.0.5]
+	at jdk.proxy21/jdk.proxy21.$Proxy275.persist(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityHandlerInvocationHandler.invokeMethod(SharedEntityManagerCreator.java:240) ~[spring-orm-7.0.5.jar:7.0.5]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:386) ~[spring-orm-7.0.5.jar:7.0.5]
+	at jdk.proxy21/jdk.proxy21.$Proxy275.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:664) ~[spring-data-jpa-4.0.3.jar:4.0.3]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.0.3.jar:4.0.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166) ~[spring-data-jpa-4.0.3.jar:4.0.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.5.jar:7.0.5]
+	at jdk.proxy21/jdk.proxy21.$Proxy277.save(Unknown Source) ~[na:na]
+	at com.ptm.personaltaskmanager.service.CreateAccountService.createUser(CreateAccountService.java:54) ~[classes/:na]
+	at com.ptm.personaltaskmanager.controller.AuthController.createAccount(AuthController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-03-10T18:30:33.892-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2026-03-10T18:30:33.892-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(2036203424<open>)]
+2026-03-10T18:30:33.892-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] org.hibernate.orm.core                   : HHH006585: Rolling back transaction
+2026-03-10T18:30:33.908-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] org.postgresql.jdbc.PgConnection         :   setAutoCommit = true
+2026-03-10T18:30:33.908-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-03-10T18:30:33.908-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.ptm.personaltaskmanager.exception.GlobalExceptionHandler#handleDataIntegrity(DataIntegrityViolationException)
+2026-03-10T18:30:33.908-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2026-03-10T18:30:33.908-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.ptm.personaltaskmanager.api.ApiResponse@334e4135]
+2026-03-10T18:30:33.923-04:00  WARN 33432 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: value too long for type character varying(12)] [insert into users (password,username) values (?,?)]; SQL [insert into users (password,username) values (?,?)]]
+2026-03-10T18:30:33.923-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-03-10T18:30:33.923-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] org.hibernate.session.metrics            : HHH000401: Logging session metrics:
+	21433100 ns acquiring 1 JDBC connections
+	0 ns releasing 0 JDBC connections
+	21621800 ns preparing 2 JDBC statements
+	56047900 ns executing 2 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2026-03-10T18:30:33.923-04:00 DEBUG 33432 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 409 CONFLICT
+2026-03-10T18:30:39.328-04:00 DEBUG 33432 --- [RMI TCP Connection(56)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(56)-127.0.0.1: accepted socket from [127.0.0.1:55589]
+2026-03-10T18:30:39.328-04:00 DEBUG 33432 --- [RMI TCP Connection(56)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(56)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:30:39.328-04:00 DEBUG 33432 --- [RMI TCP Connection(56)-127.0.0.1] javax.management.remote.rmi              : connectionId=rmi://127.0.0.1  1
+2026-03-10T18:30:54.343-04:00 DEBUG 33432 --- [RMI TCP Connection(56)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(56)-127.0.0.1: (port 51285) connection closed
+2026-03-10T18:30:54.343-04:00 DEBUG 33432 --- [RMI TCP Connection(56)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(56)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=55589,localport=51285]
+2026-03-10T18:30:54.343-04:00 DEBUG 33432 --- [RMI TCP Connection(56)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(56)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=55589,localport=51285]
+2026-03-10T18:30:56.280-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:30:56.280-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:31:26.293-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:31:26.293-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:31:38.875-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(57)-127.0.0.1: accepted socket from [127.0.0.1:58097]
+2026-03-10T18:31:38.875-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(57)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:31:38.875-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(57)-127.0.0.1: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@9ba6b1b
+2026-03-10T18:31:38.875-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(57)-127.0.0.1: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@9ba6b1b
+2026-03-10T18:31:38.875-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(57)-127.0.0.1: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@9ba6b1b
+2026-03-10T18:31:38.875-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(57)-127.0.0.1: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@9ba6b1b
+2026-03-10T18:31:38.875-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(57)-127.0.0.1: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@9ba6b1b
+2026-03-10T18:31:39.338-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(57)-127.0.0.1: (port 51285) op = 82
+2026-03-10T18:31:39.338-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(57)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:31:39.338-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] javax.management.remote.rmi              : connectionId=rmi://127.0.0.1  1
+2026-03-10T18:31:56.300-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:31:56.300-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:32:05.693-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@7e13edb is alive
+2026-03-10T18:32:08.900-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(57)-127.0.0.1: (port 51285) connection closed
+2026-03-10T18:32:08.900-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(57)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=58097,localport=51285]
+2026-03-10T18:32:08.900-04:00 DEBUG 33432 --- [RMI TCP Connection(57)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(57)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=58097,localport=51285]
+2026-03-10T18:32:10.310-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+
+java.io.EOFException
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1339) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:776) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:334) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-03-10T18:32:10.310-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.apache.coyote.http11.Http11Processor   : Error state [CLOSE_CONNECTION_NOW] reported while processing request
+
+java.io.EOFException
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1339) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1223) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:776) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:334) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-03-10T18:32:10.312-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/createaccount", parameters={}
+2026-03-10T18:32:10.312-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.ptm.personaltaskmanager.controller.AuthController#createAccount(CreateAccountRequest)
+2026-03-10T18:32:10.312-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-03-10T18:32:10.312-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.hibernate.orm.core                   : HHH006588: Opening session [tenant=null]
+2026-03-10T18:32:10.312-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.ptm.personaltaskmanager.dto.CreateAccountRequest@9371f4f]
+2026-03-10T18:32:10.312-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] c.p.p.service.CreateAccountService       : CreateAccountService.createUser: Starting Method
+2026-03-10T18:32:10.312-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] c.p.p.service.CreateAccountService       : CreateAccountService.createUser: request username = testuser
+2026-03-10T18:32:10.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.s.d.j.r.query.PartTreeJpaQuery         : QueryPreparer: Derived query for query method [public abstract java.util.Optional com.ptm.personaltaskmanager.database.CreateAccountRepository.findByUsername(java.lang.String)]: 'SELECT u FROM Users u WHERE u.username = :username'
+2026-03-10T18:32:10.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T18:32:10.421-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(218667697<open>)] for JPA transaction
+2026-03-10T18:32:10.421-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2026-03-10T18:32:10.421-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.hibernate.orm.core                   : HHH006583: Beginning transaction
+2026-03-10T18:32:10.421-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.postgresql.jdbc.PgConnection         :   setAutoCommit = false
+2026-03-10T18:32:10.421-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@480a1574]
+2026-03-10T18:32:10.421-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into users (password,username) values (?,?)
+2026-03-10T18:32:10.478-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-03-10T18:32:10.478-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(218667697<open>)]
+2026-03-10T18:32:10.478-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.hibernate.orm.core                   : HHH006584: Committing transaction
+2026-03-10T18:32:10.488-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.hibernate.orm.event                  : HHH90060071: Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2026-03-10T18:32:10.488-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.hibernate.orm.event                  : HHH90060072: Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2026-03-10T18:32:10.488-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.hibernate.orm.core                   : Listing entities:
+2026-03-10T18:32:10.488-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.hibernate.orm.core                   : com.ptm.personaltaskmanager.model.Users{password=$2a$10$x2gHTFZDrCmo.4W2.WJtVeA/g2rJE98mWObwPO1p4TF8Z9ixYkJOq, id=2, username=testuser}
+2026-03-10T18:32:10.505-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.postgresql.jdbc.PgConnection         :   setAutoCommit = true
+2026-03-10T18:32:10.505-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-03-10T18:32:10.505-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] c.p.p.service.CreateAccountService       : CreateAccountService.createUser: response message = OK
+2026-03-10T18:32:10.505-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2026-03-10T18:32:10.505-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.ptm.personaltaskmanager.dto.CreateAccountResponse@3eb68365]
+2026-03-10T18:32:10.505-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-03-10T18:32:10.505-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] org.hibernate.session.metrics            : HHH000401: Logging session metrics:
+	23754200 ns acquiring 1 JDBC connections
+	0 ns releasing 0 JDBC connections
+	23857600 ns preparing 2 JDBC statements
+	62944900 ns executing 2 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	5737400 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2026-03-10T18:32:10.505-04:00 DEBUG 33432 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-10T18:32:11.221-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@2f6838d0 is alive
+2026-03-10T18:32:12.527-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@77352415 is alive
+2026-03-10T18:32:17.173-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@369deab3 is alive
+2026-03-10T18:32:25.527-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@796701d4 is alive
+2026-03-10T18:32:26.301-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:32:26.301-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:32:39.348-04:00 DEBUG 33432 --- [RMI TCP Connection(58)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(58)-127.0.0.1: accepted socket from [127.0.0.1:60386]
+2026-03-10T18:32:39.348-04:00 DEBUG 33432 --- [RMI TCP Connection(58)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(58)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:32:39.348-04:00 DEBUG 33432 --- [RMI TCP Connection(58)-127.0.0.1] javax.management.remote.rmi              : connectionId=rmi://127.0.0.1  1
+2026-03-10T18:32:42.170-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2026-03-10T18:32:42.170-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.ptm.personaltaskmanager.controller.AuthController#login(LoginRequest)
+2026-03-10T18:32:42.170-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-03-10T18:32:42.170-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] org.hibernate.orm.core                   : HHH006588: Opening session [tenant=null]
+2026-03-10T18:32:42.170-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.ptm.personaltaskmanager.dto.LoginRequest@450093a1]
+2026-03-10T18:32:42.170-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] c.p.p.service.AuthService                : AuthService.login: Starting Method
+2026-03-10T18:32:42.170-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] c.p.p.service.AuthService                : AuthService.login: Username = testuser
+2026-03-10T18:32:42.170-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] o.s.d.j.r.query.PartTreeJpaQuery         : QueryPreparer: Derived query for query method [public abstract java.util.Optional com.ptm.personaltaskmanager.database.AuthenticationRepository.findByUsername(java.lang.String)]: 'SELECT u FROM Users u WHERE u.username = :username'
+2026-03-10T18:32:42.170-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T18:32:42.303-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] c.p.p.service.AuthService                : AuthService.login: Message = SUCCESS
+2026-03-10T18:32:42.303-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2026-03-10T18:32:42.303-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.ptm.personaltaskmanager.dto.LoginResponse@e9b2b32]
+2026-03-10T18:32:42.303-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-03-10T18:32:42.303-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] org.hibernate.session.metrics            : HHH000401: Logging session metrics:
+	30421300 ns acquiring 1 JDBC connections
+	0 ns releasing 0 JDBC connections
+	30459200 ns preparing 1 JDBC statements
+	28358800 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2026-03-10T18:32:42.303-04:00 DEBUG 33432 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-10T18:32:51.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2026-03-10T18:32:51.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.ptm.personaltaskmanager.controller.AuthController#login(LoginRequest)
+2026-03-10T18:32:51.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-03-10T18:32:51.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] org.hibernate.orm.core                   : HHH006588: Opening session [tenant=null]
+2026-03-10T18:32:51.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.ptm.personaltaskmanager.dto.LoginRequest@dca43fd]
+2026-03-10T18:32:51.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] c.p.p.service.AuthService                : AuthService.login: Starting Method
+2026-03-10T18:32:51.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] c.p.p.service.AuthService                : AuthService.login: Username = testuser
+2026-03-10T18:32:51.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] o.s.d.j.r.query.PartTreeJpaQuery         : QueryPreparer: Derived query for query method [public abstract java.util.Optional com.ptm.personaltaskmanager.database.AuthenticationRepository.findByUsername(java.lang.String)]: 'SELECT u FROM Users u WHERE u.username = :username'
+2026-03-10T18:32:51.314-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T18:32:51.429-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.ptm.personaltaskmanager.exception.GlobalExceptionHandler#handleInvalidPasswordException(InvalidPasswordException)
+2026-03-10T18:32:51.429-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2026-03-10T18:32:51.429-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.ptm.personaltaskmanager.api.ApiResponse@732288d]
+2026-03-10T18:32:51.429-04:00  WARN 33432 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.ptm.personaltaskmanager.exception.InvalidPasswordException: Invalid password]
+2026-03-10T18:32:51.429-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-03-10T18:32:51.429-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] org.hibernate.session.metrics            : HHH000401: Logging session metrics:
+	21334600 ns acquiring 1 JDBC connections
+	0 ns releasing 0 JDBC connections
+	21368600 ns preparing 1 JDBC statements
+	23723900 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2026-03-10T18:32:51.429-04:00 DEBUG 33432 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-03-10T18:32:54.374-04:00 DEBUG 33432 --- [RMI TCP Connection(58)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(58)-127.0.0.1: (port 51285) connection closed
+2026-03-10T18:32:54.374-04:00 DEBUG 33432 --- [RMI TCP Connection(58)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(58)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=60386,localport=51285]
+2026-03-10T18:32:54.374-04:00 DEBUG 33432 --- [RMI TCP Connection(58)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(58)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=60386,localport=51285]
+2026-03-10T18:32:56.304-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:32:56.304-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:32:56.902-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/auth/login", parameters={}
+2026-03-10T18:32:56.902-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.ptm.personaltaskmanager.controller.AuthController#login(LoginRequest)
+2026-03-10T18:32:56.902-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-03-10T18:32:56.902-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] org.hibernate.orm.core                   : HHH006588: Opening session [tenant=null]
+2026-03-10T18:32:56.902-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.ptm.personaltaskmanager.dto.LoginRequest@42cf254c]
+2026-03-10T18:32:56.902-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] c.p.p.service.AuthService                : AuthService.login: Starting Method
+2026-03-10T18:32:56.902-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] c.p.p.service.AuthService                : AuthService.login: Username = testuser
+2026-03-10T18:32:56.902-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] o.s.d.j.r.query.PartTreeJpaQuery         : QueryPreparer: Derived query for query method [public abstract java.util.Optional com.ptm.personaltaskmanager.database.AuthenticationRepository.findByUsername(java.lang.String)]: 'SELECT u FROM Users u WHERE u.username = :username'
+2026-03-10T18:32:56.902-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T18:32:57.018-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] c.p.p.service.AuthService                : AuthService.login: Message = SUCCESS
+2026-03-10T18:32:57.018-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2026-03-10T18:32:57.018-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.ptm.personaltaskmanager.dto.LoginResponse@36009616]
+2026-03-10T18:32:57.018-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-03-10T18:32:57.018-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] org.hibernate.session.metrics            : HHH000401: Logging session metrics:
+	22586400 ns acquiring 1 JDBC connections
+	0 ns releasing 0 JDBC connections
+	22619000 ns preparing 1 JDBC statements
+	23360400 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2026-03-10T18:32:57.018-04:00 DEBUG 33432 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-03-10T18:33:26.311-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:33:26.311-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:33:39.375-04:00 DEBUG 33432 --- [RMI TCP Connection(59)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(59)-127.0.0.1: accepted socket from [127.0.0.1:55426]
+2026-03-10T18:33:39.375-04:00 DEBUG 33432 --- [RMI TCP Connection(59)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(59)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:33:39.375-04:00 DEBUG 33432 --- [RMI TCP Connection(59)-127.0.0.1] javax.management.remote.rmi              : connectionId=rmi://127.0.0.1  1
+2026-03-10T18:33:44.226-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@7e13edb is alive
+2026-03-10T18:33:54.385-04:00 DEBUG 33432 --- [RMI TCP Connection(59)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(59)-127.0.0.1: (port 51285) connection closed
+2026-03-10T18:33:54.385-04:00 DEBUG 33432 --- [RMI TCP Connection(59)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(59)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=55426,localport=51285]
+2026-03-10T18:33:54.385-04:00 DEBUG 33432 --- [RMI TCP Connection(59)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(59)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=55426,localport=51285]
+2026-03-10T18:33:56.267-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@2f6838d0 is alive
+2026-03-10T18:33:56.326-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:33:56.326-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:33:58.124-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@77352415 is alive
+2026-03-10T18:34:07.643-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@369deab3 is alive
+2026-03-10T18:34:24.603-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@796701d4 is alive
+2026-03-10T18:34:26.338-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:34:26.338-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:34:39.391-04:00 DEBUG 33432 --- [RMI TCP Connection(60)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(60)-127.0.0.1: accepted socket from [127.0.0.1:53647]
+2026-03-10T18:34:39.391-04:00 DEBUG 33432 --- [RMI TCP Connection(60)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(60)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:34:39.391-04:00 DEBUG 33432 --- [RMI TCP Connection(60)-127.0.0.1] javax.management.remote.rmi              : connectionId=rmi://127.0.0.1  1
+2026-03-10T18:34:54.399-04:00 DEBUG 33432 --- [RMI TCP Connection(60)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(60)-127.0.0.1: (port 51285) connection closed
+2026-03-10T18:34:54.399-04:00 DEBUG 33432 --- [RMI TCP Connection(60)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(60)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=53647,localport=51285]
+2026-03-10T18:34:54.399-04:00 DEBUG 33432 --- [RMI TCP Connection(60)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(60)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=53647,localport=51285]
+2026-03-10T18:34:56.347-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:34:56.347-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:35:22.758-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@7e13edb is alive
+2026-03-10T18:35:26.360-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:35:26.360-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:35:39.410-04:00 DEBUG 33432 --- [RMI TCP Connection(61)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(61)-127.0.0.1: accepted socket from [127.0.0.1:57672]
+2026-03-10T18:35:39.410-04:00 DEBUG 33432 --- [RMI TCP Connection(61)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(61)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:35:39.410-04:00 DEBUG 33432 --- [RMI TCP Connection(61)-127.0.0.1] javax.management.remote.rmi              : connectionId=rmi://127.0.0.1  1
+2026-03-10T18:35:41.320-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@2f6838d0 is alive
+2026-03-10T18:35:43.730-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@77352415 is alive
+2026-03-10T18:35:54.411-04:00 DEBUG 33432 --- [RMI TCP Connection(61)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(61)-127.0.0.1: (port 51285) connection closed
+2026-03-10T18:35:54.412-04:00 DEBUG 33432 --- [RMI TCP Connection(61)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(61)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=57672,localport=51285]
+2026-03-10T18:35:54.412-04:00 DEBUG 33432 --- [RMI TCP Connection(61)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(61)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=57672,localport=51285]
+2026-03-10T18:35:56.368-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:35:56.368-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:35:58.138-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@369deab3 is alive
+2026-03-10T18:36:23.691-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@796701d4 is alive
+2026-03-10T18:36:26.381-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:36:26.381-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:36:38.888-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(62)-127.0.0.1: accepted socket from [127.0.0.1:57674]
+2026-03-10T18:36:38.889-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(62)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:36:38.889-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(62)-127.0.0.1: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@9ba6b1b
+2026-03-10T18:36:38.889-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(62)-127.0.0.1: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@9ba6b1b
+2026-03-10T18:36:38.889-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(62)-127.0.0.1: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@9ba6b1b
+2026-03-10T18:36:38.889-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(62)-127.0.0.1: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@9ba6b1b
+2026-03-10T18:36:38.890-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.loader                           : RMI TCP Connection(62)-127.0.0.1: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@9ba6b1b
+2026-03-10T18:36:39.411-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(62)-127.0.0.1: (port 51285) op = 82
+2026-03-10T18:36:39.411-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(62)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:36:39.411-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] javax.management.remote.rmi              : connectionId=rmi://127.0.0.1  1
+2026-03-10T18:36:56.387-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:36:56.387-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:37:01.291-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@7e13edb is alive
+2026-03-10T18:37:08.892-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(62)-127.0.0.1: (port 51285) connection closed
+2026-03-10T18:37:08.892-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(62)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=57674,localport=51285]
+2026-03-10T18:37:08.892-04:00 DEBUG 33432 --- [RMI TCP Connection(62)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(62)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=57674,localport=51285]
+2026-03-10T18:37:26.372-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@2f6838d0 is alive
+2026-03-10T18:37:26.397-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:37:26.397-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:37:29.327-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@77352415 is alive
+2026-03-10T18:37:39.416-04:00 DEBUG 33432 --- [RMI TCP Connection(63)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(63)-127.0.0.1: accepted socket from [127.0.0.1:63921]
+2026-03-10T18:37:39.416-04:00 DEBUG 33432 --- [RMI TCP Connection(63)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(63)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:37:39.416-04:00 DEBUG 33432 --- [RMI TCP Connection(63)-127.0.0.1] javax.management.remote.rmi              : connectionId=rmi://127.0.0.1  1
+2026-03-10T18:37:48.619-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@369deab3 is alive
+2026-03-10T18:37:54.419-04:00 DEBUG 33432 --- [RMI TCP Connection(63)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(63)-127.0.0.1: (port 51285) connection closed
+2026-03-10T18:37:54.420-04:00 DEBUG 33432 --- [RMI TCP Connection(63)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(63)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=63921,localport=51285]
+2026-03-10T18:37:54.420-04:00 DEBUG 33432 --- [RMI TCP Connection(63)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(63)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=63921,localport=51285]
+2026-03-10T18:37:56.405-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:37:56.405-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:38:22.759-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@796701d4 is alive
+2026-03-10T18:38:26.407-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:38:26.407-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-10T18:38:39.432-04:00 DEBUG 33432 --- [RMI TCP Connection(64)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(64)-127.0.0.1: accepted socket from [127.0.0.1:50353]
+2026-03-10T18:38:39.444-04:00 DEBUG 33432 --- [RMI TCP Connection(64)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(64)-127.0.0.1: (port 51285) op = 80
+2026-03-10T18:38:39.444-04:00 DEBUG 33432 --- [RMI TCP Connection(64)-127.0.0.1] javax.management.remote.rmi              : connectionId=rmi://127.0.0.1  1
+2026-03-10T18:38:39.820-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - keepalive: connection org.postgresql.jdbc.PgConnection@7e13edb is alive
+2026-03-10T18:38:54.450-04:00 DEBUG 33432 --- [RMI TCP Connection(64)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(64)-127.0.0.1: (port 51285) connection closed
+2026-03-10T18:38:54.450-04:00 DEBUG 33432 --- [RMI TCP Connection(64)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(64)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=50353,localport=51285]
+2026-03-10T18:38:54.450-04:00 DEBUG 33432 --- [RMI TCP Connection(64)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(64)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=50353,localport=51285]
+2026-03-10T18:38:56.422-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Pool stats (total=5/5, idle=5/5, active=0, waiting=0)
+2026-03-10T18:38:56.422-04:00 DEBUG 33432 --- [HikariPool-18:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Fill pool skipped, pool has sufficient level or currently being filled.

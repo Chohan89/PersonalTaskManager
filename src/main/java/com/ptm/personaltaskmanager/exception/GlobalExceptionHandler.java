@@ -39,4 +39,28 @@ public class GlobalExceptionHandler {
     	return ResponseEntity.status(HttpStatus.BAD_REQUEST)
     			.body(new ApiResponse(ResponseCodes.ERROR,ex.getMessage()));
     }
+    
+    @ExceptionHandler(InvalidPasswordException.class)
+    public ResponseEntity<ApiResponse> handleInvalidPasswordException(InvalidPasswordException ex) {
+    	return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+    			.body(new ApiResponse(ResponseCodes.INVALID_PASSWORD,ex.getMessage()));
+    }
+    
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<ApiResponse> handleUserNotFoundException(UserNotFoundException ex) {
+    	return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+    			.body(new ApiResponse(ResponseCodes.INVALID_PASSWORD,ex.getMessage()));
+    }
+   
+    @ExceptionHandler(DuplicateUserException.class)
+    public ResponseEntity<ApiResponse> handleDuplicateUserException(DuplicateUserException ex) {
+    	return ResponseEntity.status(HttpStatus.CONFLICT)
+    			.body(new ApiResponse(ResponseCodes.CONFLICT,ex.getMessage()));
+    }
+    
+    @ExceptionHandler(TaskNotFoundException.class)
+    public ResponseEntity<ApiResponse> handleTaskNotFoundException(TaskNotFoundException ex) {
+    	return ResponseEntity.status(HttpStatus.NOT_FOUND)
+    			.body(new ApiResponse(ResponseCodes.NOT_FOUND,ex.getMessage()));
+    }
 }

@@ -37,7 +37,7 @@ public class DeleteTaskService {
 			throw new IllegalArgumentException("Task is null");
 		}
 		
-		Tasks task = deleteTaskRepository.findbyTaskNumber(request.getTaskNumber())
+		Tasks task = deleteTaskRepository.findByTaskNumber(request.getTaskNumber())
 				.orElseThrow(() -> new TaskNotFoundException(request.getTask()));
 
 	    if (!task.getUsername().equalsIgnoreCase(request.getUsername())) {

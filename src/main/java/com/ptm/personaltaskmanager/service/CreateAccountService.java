@@ -9,9 +9,8 @@ import com.ptm.personaltaskmanager.database.CreateAccountRepository;
 import com.ptm.personaltaskmanager.dto.CreateAccountRequest;
 import com.ptm.personaltaskmanager.dto.CreateAccountResponse;
 import com.ptm.personaltaskmanager.enums.ResponseCodes;
-import com.ptm.personaltaskmanager.exception.DuplicateTitleException;
+import com.ptm.personaltaskmanager.exception.DuplicateUserException;
 import com.ptm.personaltaskmanager.mapper.UserMapper;
-import com.ptm.personaltaskmanager.model.Tasks;
 import com.ptm.personaltaskmanager.model.Users;
 
 @Service
@@ -44,12 +43,13 @@ public class CreateAccountService {
 		//if username exists in db we throw exception
 		createAccountRepository.findByUsername(request.getUsername())
 				.ifPresent(u -> {
-		            throw new DuplicateTitleException();
+		            throw new DuplicateUserException();
 		        });
 
         // DTO → Entity
         Users user = userMapper.toEntity(request);
-	    
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
+
 	    //create user, error handling done by GlobalExceptionHandler class
 	    createAccountRepository.save(user);
 

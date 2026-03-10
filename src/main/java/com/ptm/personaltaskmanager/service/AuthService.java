@@ -39,7 +39,7 @@ public class AuthService {
         Users user = authenticationRepository.findByUsername(request.getUsername())
                 .orElseThrow(() -> new UserNotFoundException(request.getUsername()));
 
-        if (!passwordEncoder.matches(request.getPassword(), user.getPasswordHash())) {
+        if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
             throw new InvalidPasswordException();
         }
 

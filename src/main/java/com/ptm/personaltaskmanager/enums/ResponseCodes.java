@@ -6,7 +6,9 @@ public enum ResponseCodes {
     BAD_REQUEST(400, "Bad Request"),
     NOT_FOUND(404, "Not Found"),
     INTERNAL_ERROR(500, "Internal Server Error"),
-    ERROR(500, "Error");
+    ERROR(500, "Error"),
+	INVALID_PASSWORD(401, "Unauthorized"),
+	CONFLICT(409,"Conflict");
 
     private final int code;
     private final String message;

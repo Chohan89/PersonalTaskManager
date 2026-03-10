@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.ptm.personaltaskmanager.model.Tasks;
 
 public interface UpdateTaskRepository extends JpaRepository<Tasks, Integer>{
-	Optional<Tasks> findbyTaskNumber(Integer taskNumber);
+	Optional<Tasks> findByTaskNumber(Integer taskNumber);
 }
